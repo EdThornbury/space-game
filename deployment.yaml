@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: space-game
+  labels:
+    app: space-game
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: space-game
+  template:
+    metadata:
+      labels:
+        app: space-game
+    spec:
+      containers:
+      - name: space-game
+        image: ghcr.io/dave-access/space-game:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "256Mi"
+          requests:
+            cpu: "0.2"
+            memory: "128Mi"
