@@ -14,7 +14,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /space-game
+      - path: /space-game-flux
         pathType: Prefix
         backend:
           service:
