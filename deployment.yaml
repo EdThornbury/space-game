@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: space-game
+  name: space-game-flux
   labels:
-    app: space-game
+    app: space-game-flux
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: space-game
+      app: space-game-flux
   template:
     metadata:
       labels:
-        app: space-game
+        app: space-game-flux
     spec:
       containers:
       - name: space-game
