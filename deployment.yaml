@@ -5,7 +5,7 @@ metadata:
   labels:
     app: space-game-flux
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: space-game-flux
