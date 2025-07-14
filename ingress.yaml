@@ -4,15 +4,13 @@ metadata:
   name: space-game-ingress-flux
   annotations:
     external-dns.alpha.kubernetes.io/cloudflare-proxied: 'true'
-    external-dns.alpha.kubernetes.io/hostname: davespacegame_flux.k8sdevaccessito.uk
-    external-dns.alpha.kubernetes.io/target: 5d25a989-ee3f-4434-88fe-bf8213aa976a.cfargotunnel.com
+    external-dns.alpha.kubernetes.io/hostname: barryspacegame.aasdev.accessacloud.com
+    external-dns.alpha.kubernetes.io/target: db3b8039-3621-4829-b86f-0634bb58c1ab.cfargotunnel.com
     nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/auth-url: "https://oauth2-proxy.k8sdevaccessito.uk/oauth2/auth"
-    nginx.ingress.kubernetes.io/auth-signin: "https://oauth2-proxy.k8sdevaccessito.uk/oauth2/start"
-    nginx.ingress.kubernetes.io/auth-response-headers: "x-auth-request-user, x-auth-request-email, authorization, x-forwarded-host"
 spec:
   rules:
-  - http:
+  - host: barryspacegame.aasdev.accessacloud.com
+    http:
       paths:
       - path: /space-game-flux
         pathType: Prefix
